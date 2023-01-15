@@ -1,0 +1,4 @@
+{
+  "appService.defaultWebAppToDeploy": "/subscriptions/1dd3c480-66c6-466a-8719-197405970647/AppServices/subscriptions/1dd3c480-66c6-466a-8719-197405970647/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/social-filter",
+  "appService.deploySubpath": "."
+}

@@ -17,7 +17,7 @@ def filtering():
     num = int(time.time()) % CAT_TOTAL
     path = "src/img/cat/" + str(num) +".jpg"
 
-    return render_template('filtering.html', cat_image=path)
+    return render_template('filtering.html', cat_image=path, img_num=str(num))
 
 ## おまじない
 if __name__ == "__main__":

@@ -1,4 +1,12 @@
 {% extends "layout.html" %}
+{% block meta %}
+<meta name=”twitter:card” content=”summary_large_image” />
+<meta name=”twitter:title” content=”にゃーん(社会性フィルター)”>
+<meta name=”twitter:description” content=”社会性フィルター”>
+<meta name=”twitter:image” content=”https://social-filter.azurewebsites.net/src/img/cat/{{img_num}}.jpg”>
+<meta charset="utf-8">
+{% endblock %}
+
 {% block content %}
 <h2 class="display-5">フィルタリング完了</h2>
 
@@ -8,8 +16,7 @@
 </figure>
 
 <div class="d-grid gap-2 mx-auto">
-  <a href="https://twitter.com/share?url=https://{{ request.host }}/{{cat_image}}&amp;text=にゃーん %23社会性フィルター" rel="nofollow" target="_blank" class="btn btn-primary" data-hashtags="社会性フィルター" data-size="large" data-show-count="false">ツイートする</a>
-  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <a href="https://twitter.com/share?text=にゃーん %23社会性フィルター%0D%0A%0D%0A" rel="nofollow" target="_blank" class="btn btn-primary" data-hashtags="社会性フィルター">ツイートする</a>
 
   <a href="{{url_for('main')}}" class="btn btn-outline-primary">まだまだ色々吐き出したい。。(TOPページに戻る)</a>
 </div>
@@ -19,5 +26,4 @@
   <img class="dust-open" src="img/dust.png" alt="何を書いたか、見ます……？">
 </div>
 -->
-
 {% endblock %}
