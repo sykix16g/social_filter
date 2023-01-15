@@ -1,14 +1,29 @@
 {% extends "layout.html" %}
 {% block content %}
-<h2>あなたの思いを、ここでだけはそのまま聞かせて</h2>
 
-<p>苦しいことがあったとき、言葉にするだけできっと楽になる。だけど、その言葉そのものを誰かに聞かせてしまったら、きっとその誰かが苦しむかもしれない。私が何かを思っていることを、それだけでも伝えたい……。</p>
+<div class="p-4 p-sm-5 my-4 rounded">
+  <div class="row">
+    <div class="col-md-3 order-md-2">
+      <img src="src/img/top.jpg" class="img-fluid">
+    </div>
+    <div class="col-md-9 order-md-1">
+      <h1 class="display-3">あなたの思いを、ここでだけはそのまま聞かせて</h1>
+      <p>苦しいことがあったとき、言葉にするだけできっと楽になる。だけど、その言葉そのものを誰かに聞かせてしまったら、きっとその誰かが苦しむかもしれない。私が何かを思っていることを、それだけでも伝えたい……。</p>
+      <p>ここに吐き出して、社会性フィルターに通して、さっぱりしましょう。フィルターを通したら、そこに残るのは可愛いネコチャンの画像と鳴き声だけです。</p>
+    </div>
+  </div>
+</div>
 
-<p>ここに吐き出して、社会性フィルターに通して、さっぱりしましょう。フィルターを通したら、そこに残るのは可愛いネコチャンの画像と鳴き声だけです。</p>
-
-<form action="{{ url_for('filtering') }}" method="POST">
-  <input type="textarea" name="text" placeholder="何でも書いていいですよ。">
-  <input type="submit" value="フィルターに掛ける">
-</form>
-
+<div class="card">
+  <h3 class="card-header">社会性フィルターを使う</h3>
+  <div class=" card-body">
+    <form action="{{ url_for('filtering') }}" method="POST">
+      <div class="mb-3 textarea">
+        <label for="filtering" class="form-label"></label>
+        <textarea class="form-control" name="text" rows="5" cols="20" id="filtering" placeholder="何でも書いていいんですよ。"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">フィルターに掛ける</button>
+    </form>
+  </div>
+</div>
 {% endblock %}

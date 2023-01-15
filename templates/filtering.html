@@ -1,12 +1,18 @@
 {% extends "layout.html" %}
 {% block content %}
-<h2>にゃーん(社会性フィルター)</h2>
-<img class="cat" src="{{cat_image}}" />
+<h2 class="display-5">フィルタリング完了</h2>
 
-<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="にゃーん(社会性フィルター)" data-url="https://{{ request.host }}/{{cat_image}}" data-show-count="false">はきだす</a>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<figure class="figure">
+  <img src="{{cat_image}}" class="figure-img img-fluid rounded" alt="にゃーん">
+  <figcaption class="figure-caption">にゃーん(社会性フィルター)</figcaption>
+</figure>
 
-<a href="{{url_for('main')}}">まだまだ色々吐き出したい。。</a>
+<div class="d-grid gap-2 mx-auto">
+  <a href="https://twitter.com/share?url=https://{{ request.host }}/{{cat_image}}&amp;text=にゃーん %23社会性フィルター" rel="nofollow" target="_blank" class="btn btn-primary" data-hashtags="社会性フィルター" data-size="large" data-show-count="false">ツイートする</a>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+  <a href="{{url_for('main')}}" class="btn btn-outline-primary">まだまだ色々吐き出したい。。(TOPページに戻る)</a>
+</div>
 
 <!--
 <div class="dust">

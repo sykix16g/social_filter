@@ -2,22 +2,34 @@
 <html>
 <head>
   <title>😺社会性フィルター😺</title>
-  <link rel="icon" type="image/png" href="img/icon.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="img/icon.png">
+  <link rel="icon" type="image/png" href="src/img/icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="apple-touch-icon" sizes="180x180" href="src/img/icon.png">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div class="container">
-    <div class="content">
-      {% block content %}
-      <!-- ここにメインコンテンツを書く -->
-      {% endblock %}
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{{url_for('main')}}">🐈</a>
     </div>
-    <div class="description">
+  </nav>
+  <div class="container">
+    {% block content %}
+    <!-- ここにメインコンテンツを書く -->
+    {% endblock %}
+
+    <hr class="my-4">
+
+    <div class="card description">
       {% include "description.html" %}
     </div>
   </div>
-  <footer>
-    <p class="sozai">社会性フィルター</p>
+  <footer class="py-3 my-4">
+    <div class="container">
+      <p class="sozai text-center text-muted">© 2023 psychmelon</p>
+    </div>
   </footer>
 </body>
 </html>

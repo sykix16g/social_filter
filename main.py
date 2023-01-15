@@ -1,7 +1,7 @@
 from flask import Flask,render_template
 import time
 
-IMAGE_PATH = './templates/img'
+IMAGE_PATH = './templates/src'
 CAT_TOTAL = 9
 app = Flask(__name__, static_folder=IMAGE_PATH)
 
@@ -15,7 +15,7 @@ def filtering():
 
     # ネコチャンの画像はUNIX TIME基準で適当に
     num = int(time.time()) % CAT_TOTAL
-    path = "img/cat/" + str(num) +".jpg"
+    path = "src/img/cat/" + str(num) +".jpg"
 
     return render_template('filtering.html', cat_image=path)
 
