@@ -1,17 +1,23 @@
 from flask import Flask,render_template
-app = Flask(__name__, static_folder='./templates/img')
+import time
+
+IMAGE_PATH = './templates/img'
+CAT_TOTAL = 9
+app = Flask(__name__, static_folder=IMAGE_PATH)
 
 @app.route('/')
-def hello():
-    name = "Hello World"
-    #return name
+def main():
+    return render_template('main.html')
 
-    return render_template('main.html', title='😺社会性フィルター😺', name=name) #変更
+@app.route('/filtering', methods=['POST'])
+def filtering():
+    # POSTの内容は捨てる
 
-@app.route('/good')
-def good():
-    name = "Good"
-    return name
+    # ネコチャンの画像はUNIX TIME基準で適当に
+    num = int(time.time()) % CAT_TOTAL
+    path = "img/cat/" + str(num) +".jpg"
+
+    return render_template('filtering.html', cat_image=path)
 
 ## おまじない
 if __name__ == "__main__":
