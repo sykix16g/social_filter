@@ -2,10 +2,22 @@
 <html>
 <head>
   <title>{{ title }}</title>
+  <link rel="icon" type="image/png" href="img/icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/icon.png">
 </head>
 <body>
-  {% block content %}
-  <!-- ここにメインコンテンツを書く -->
-  {% endblock %}
+  <div class="container">
+    <div class="content">
+      {% block content %}
+      <!-- ここにメインコンテンツを書く -->
+      {% endblock %}
+    </div>
+    <div class="description">
+      {% include "description.html" %}
+    </div>
+  </div>
+  <footer>
+    <p class="sozai">社会性フィルター</p>
+  </footer>
 </body>
 </html>
