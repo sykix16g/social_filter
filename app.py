@@ -9,7 +9,7 @@ app = Flask(__name__, static_folder=IMAGE_PATH)
 def main():
     return render_template('main.html')
 
-@app.route('/filtering', methods=['POST'])
+@app.route('/filtering', methods=['GET','POST'])
 def filtering():
     # POSTの内容は捨てる
 
