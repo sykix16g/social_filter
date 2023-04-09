@@ -12,8 +12,6 @@ itsdangerous==2.1.2
 Jinja2==3.1.2
 llvmlite==0.39.1
 MarkupSafe==2.1.2
-more-itertools==9.1.0
-openai-whisper==20230307
 packaging==23.0
 PyAudio==0.2.13
 PyYAML==6.0
